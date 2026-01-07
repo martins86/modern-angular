@@ -23,6 +23,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "outputPath": "dist/modern-angular",
             "assets": [
               {
                 "glob": "**/*",
@@ -71,6 +72,15 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+         "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/martins86/modern-angular.git",
+            "baseHref": "/modern-angular/",
+            "name": "martins86",
+            "email": "martins86@gmail.com"
+          }
         }
       }
     }
